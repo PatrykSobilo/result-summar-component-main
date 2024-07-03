@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <style>
+    body {
+      background-color: white;
+      color: white;
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .container {
+     display: grid;
+     grid-template-columns: 1.1fr 1.2fr;
+     height: 40vh;
+     width: 65%;
+     margin: auto;
+     max-width: 50vh;
+     min-width: 400px;
+     
+     margin-top: 25vh;
+    }
+
+
+    .your-result-container {
+      background: linear-gradient(to bottom, hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+      border-radius: 20px;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      text-align: center;
+      padding: 20px;
+      margin-right: -20px;
+    }
+
+    .your-result-header {
+      color: hsl(256, 72%, 80%);
+      margin-top: 5%;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: large;
+    }
+
+    .score-circle {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .score-gained {
+      font-size: xxx-large;
+      font-weight: 700;
+    }
+
+    .score-max {
+      font-size: small;
+    }
+
+    .description-header {
+      color: hsl(0, 0%, 100%);
+      font-size: 24px;
+      padding-bottom: 0;
+      margin-bottom: 20px;
+    }
+
+    .description-details {
+      font-size: 12px;
+      color: hsl(256, 72%, 80%);
+      width: 85%;
+    }
+
+
+    .summary-container {
+      box-shadow: 0 15px 20px hsla(245, 75%, 52%, 0.250);
+      margin-right: -20px;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      padding-left: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .box-type {
+      width: 70%;
+      
+      display: grid;
+      grid-template-columns: 15% 15% 50% 20%;
+
+      align-items: center;
+      border-radius: 10px;
+      padding: 10px;
+      margin-left: 10%;
+      margin-bottom: 5%;
+
+      font-weight: bold;
+    }
+
+    .summary-header {
+      color: black;
+
+      font-size: large;
+      font-weight: 700;
+
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .reaction-box {
+      color: hsl(0, 100%, 67%);
+      background-color: hsla(0, 100%, 67%, 0.1);
+    }
+
+    .memory-box {
+      color: hsl(39, 100%, 56%);
+      background-color: hsla(39, 100%, 56%, 0.1);
+    }
+
+    .verbal-box {
+      color: hsl(166, 100%, 37%);
+      background-color: hsla(166, 100%, 37%, 0.1);
+    }
+
+    .visual-box {
+      color: hsl(234, 85%, 45%);
+      background-color: hsla(234, 85%, 45%, 0.1);
+    }
+
+    .specific-score {
+      text-align: right;
+      color: black;
+    }
+
+    .specfic-max-score {
+      color: rgb(128, 128, 128, 0.7);
+      margin-left: 10%;
+    }
+
+    .continue-button {
+      padding: 10px;
+      width: 70%;
+      border-radius: 20px;
+      margin-left: 10%;
+      margin-top: 5%;
+
+      color: white;
+      text-align: center;
+
+      background-color: hsl(224, 30%, 27%);
+    }
+
+    @media (max-width: 375px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 0%;
+        width: 100%;
+        height: 10000px;
+        margin: -10px;
+      }
+      
+      .your-result-container {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        margin-bottom: 20px;
+      }
+
+      .summary-container {
+        border-radius: 0px;
+        box-shadow: none;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="your-result-container">
+      <div class="your-result-header">
+        Your Result
+      </div>
+
+      <div class="score-circle">
+        <div class="score-gained">76</div>
+        <div class="score-max">of 100</div>
+      </div>
+
+      <div class="description-header">Great</div>
+
+      <div class="description-details">
+        You scored higher than 65% of the people who have taken these tests.
+      </div>
+
+    </div>
+
+    <div class="summary-container">
+      <div class="summary-header">Summary</div>
+
+      <div class="box-type reaction-box">
+        <img src="./assets/images/icon-reaction.svg" alt="energy-icon">
+        <div class="reaction-title">Reaction</div>
+        <div class="specific-score">80</div>
+        <div class="specfic-max-score">/ 100</div>
+      </div>
+
+      <div class="box-type memory-box">
+        <img src="./assets/images/icon-memory.svg" alt="brain-icon">
+        <div class="memory-title">Memory</div>
+        <div class="specific-score">92</div>
+        <div class="specfic-max-score">/ 100</div>
+      </div>
+
+      <div class="box-type verbal-box">
+        <img src="./assets/images/icon-verbal.svg" alt="chat-icon">
+        <div class="verbal-title">Verbal</div>
+        <div class="specific-score">61</div>
+        <div class="specfic-max-score">/ 100</div>
+      </div>
+
+      <div class="box-type visual-box">
+        <img src="./assets/images/icon-visual.svg" alt="eye-icon">
+        <div class="visual-title">Visual</div>
+        <div class="specific-score">72</div>
+        <div class="specfic-max-score">/ 100</div>
+      </div>
+
+      <div class="continue-button">
+        Continue
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
