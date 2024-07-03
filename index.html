@@ -49,9 +49,9 @@
     .your-result-header {
       color: hsl(256, 72%, 80%);
       margin-top: 5%;
-      margin-bottom: 20px;
+      margin-bottom: 10%;
       font-weight: 700;
-      font-size: large;
+      font-size: x-large;
     }
 
     .score-circle {
@@ -73,31 +73,32 @@
 
     .score-max {
       font-size: small;
+      color: hsl(256, 72%, 80%);
     }
 
     .description-header {
       color: hsl(0, 0%, 100%);
       font-size: 24px;
       padding-bottom: 0;
-      margin-bottom: 20px;
+      margin-bottom: 10%;
     }
 
     .description-details {
       font-size: 12px;
       color: hsl(256, 72%, 80%);
-      width: 85%;
+      max-width: 75%;
     }
 
 
     .summary-container {
-      box-shadow: 0 15px 20px hsla(245, 75%, 52%, 0.250);
+      box-shadow: 0 5px 25px hsla(245, 75%, 52%, 0.250);
       margin-right: -20px;
 
       display: flex;
       flex-direction: column;
 
       justify-content: center;
-      padding-left: 20px;
+      padding-left: 5%;
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
     }
@@ -117,14 +118,18 @@
       font-weight: bold;
     }
 
+    .specfic-max-score {
+      color: hsl(240, 1%, 68%);
+    }
+
     .summary-header {
       color: black;
 
-      font-size: large;
+      font-size: x-large;
       font-weight: 700;
 
-      margin-left: 20px;
-      margin-bottom: 20px;
+      margin: 10%;
+      margin-top: -10%
     }
 
     .reaction-box {
@@ -152,17 +157,13 @@
       color: black;
     }
 
-    .specfic-max-score {
-      color: rgb(128, 128, 128, 0.7);
-      margin-left: 10%;
-    }
-
     .continue-button {
-      padding: 10px;
+      padding: 13px;
       width: 70%;
       border-radius: 20px;
       margin-left: 10%;
       margin-top: 5%;
+      margin-bottom: -7%;
 
       color: white;
       text-align: center;
@@ -184,7 +185,11 @@
       .your-result-container {
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
-        margin-bottom: 20px;
+        margin-bottom: 20%;
+      }
+
+      .description-details {
+        max-width: 60%;
       }
 
       .summary-container {
